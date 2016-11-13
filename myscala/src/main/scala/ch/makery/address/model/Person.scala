@@ -3,6 +3,7 @@ package ch.makery.address.model
 import scalafx.beans.property.{StringProperty, IntegerProperty, ObjectProperty}
 import java.time.LocalDate;
 
+
 class Person ( firstNameS : String, lastNameS : String ){
   var firstName: StringProperty  = new StringProperty(firstNameS)
   var lastName   = new StringProperty(lastNameS) 
