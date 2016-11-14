@@ -10,6 +10,7 @@ import scalafx.collections.{ObservableBuffer}
 import ch.makery.address.model.Person
 import ch.makery.address.view.PersonEditDialogController
 import scalafx.stage.{ Stage, Modality }
+import scalafx.scene.image.Image
 
 
 object MainApp extends JFXApp {
@@ -29,16 +30,17 @@ object MainApp extends JFXApp {
   personData += new Person("Martin", "Mueller")
   
   // Transform path of RootLayout.fxml to URI for resource location
-  val rootResource = getClass.getResourceAsStream("view/RootLayout.fxml")
+  val rootResource = getClass.getResource("view/RootLayout.fxml")
   // Initialize the loader object
-  val loader = new FXMLLoader(null, NoDependencyResolver)
-  // Load root layout from FXML file
-  loader.load(rootResource);
-  // Retrieve the root component BorderPane from the FXML
+  val loader = new FXMLLoader(rootResource, NoDependencyResolver)
+  // Load root layout from fxml file.
+  loader.load();
+  // Retrieve the root component BorderPane from the FXML 
   val roots = loader.getRoot[jfxs.layout.BorderPane]
   // Initialize stage
   stage = new PrimaryStage {
     title = "AddressApp"
+    icons += new Image("file:resources/images/Address_Book.png")
     scene = new Scene {
       root = roots
     }

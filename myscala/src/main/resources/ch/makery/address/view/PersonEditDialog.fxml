@@ -4,7 +4,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="263.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.makery.address.view.PersonEditDialogController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="263.0" prefWidth="600.0" styleClass="background" stylesheets="@DarkTheme.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.makery.address.view.PersonEditDialogController">
    <children>
       <GridPane layoutX="125.0" layoutY="63.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
         <columnConstraints>
@@ -36,7 +36,7 @@
       </GridPane>
       <HBox layoutX="300.0" layoutY="231.0" spacing="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
          <children>
-            <Button layoutX="300.0" layoutY="231.0" mnemonicParsing="false" onAction="#handleOk" text="OK" />
+            <Button defaultButton="true" layoutX="300.0" layoutY="231.0" mnemonicParsing="false" onAction="#handleOk" text="OK" />
             <Button layoutX="369.0" layoutY="231.0" mnemonicParsing="false" onAction="#handleCancel" text="Cancel" />
          </children>
       </HBox>
